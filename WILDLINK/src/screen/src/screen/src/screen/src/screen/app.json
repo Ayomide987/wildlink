@@ -1,0 +1,66 @@
+{
+    "expo": {
+      "name": "WildLink",
+      "slug": "wildlink",
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "icon": "./assets/icon.png",
+      "userInterfaceStyle": "automatic",
+      "splash": {
+        "image": "./assets/splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#2D5A27"
+      },
+      "assetBundlePatterns": [
+        "**/*"
+      ],
+      "ios": {
+        "supportsTablet": true,
+        "bundleIdentifier": "com.wildlink.app",
+        "infoPlist": {
+          "NSCameraUsageDescription": "WildLink needs camera access to identify wildlife species",
+          "NSMicrophoneUsageDescription": "WildLink needs microphone access to identify wildlife sounds",
+          "NSLocationWhenInUseUsageDescription": "WildLink needs location access to show nearby wildlife and connect you with local conservationists",
+          "NSPhotoLibraryUsageDescription": "WildLink needs photo library access to identify species from your existing photos"
+        }
+      },
+      "android": {
+        "adaptiveIcon": {
+          "foregroundImage": "./assets/adaptive-icon.png",
+          "backgroundColor": "#2D5A27"
+        },
+        "package": "com.wildlink.app",
+        "permissions": [
+          "CAMERA",
+          "RECORD_AUDIO",
+          "ACCESS_FINE_LOCATION",
+          "ACCESS_COARSE_LOCATION",
+          "READ_EXTERNAL_STORAGE",
+          "WRITE_EXTERNAL_STORAGE"
+        ]
+      },
+      "web": {
+        "favicon": "./assets/favicon.png"
+      },
+      "plugins": [
+        [
+          "expo-location",
+          {
+            "locationAlwaysAndWhenInUsePermission": "Allow WildLink to use your location to show nearby wildlife."
+          }
+        ],
+        [
+          "expo-camera",
+          {
+            "cameraPermission": "Allow WildLink to access your camera to identify wildlife species."
+          }
+        ],
+        [
+          "expo-audio",
+          {
+            "microphonePermission": "Allow WildLink to access your microphone to identify wildlife sounds."
+          }
+        ]
+      ]
+    }
+  } 

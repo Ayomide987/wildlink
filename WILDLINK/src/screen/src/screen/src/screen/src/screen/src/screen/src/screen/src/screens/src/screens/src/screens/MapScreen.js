@@ -1,0 +1,32 @@
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import { theme, typography } from '../utils/theme';
+
+const MapScreen = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Wildlife Map</Text>
+      <Text style={styles.subtitle}>Interactive map coming soon!</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: theme.colors.background,
+  },
+  title: {
+    ...typography.h3,
+    color: theme.colors.text,
+    marginBottom: 8,
+  },
+  subtitle: {
+    ...typography.body1,
+    color: theme.colors.textSecondary,
+  },
+});
+
+export default MapScreen; 
